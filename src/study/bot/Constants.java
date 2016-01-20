@@ -1,0 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package study.bot;
+
+/**
+ *
+ * @author rashad
+ */
+public class Constants {
+    
+     static final String TWITTER_CONSUMER_KEY = "6QZXPWper84ZfD6vPoQg8cCkG";
+     static final String TWITTER_SECRET_KEY = "D1OtAkFvMt7Q4BHiVZ6xxzf5muVbauvZlKkXnUM8I4PL1c3gKo";
+     static final String TWITTER_ACCESS_TOKEN = "4829498849-iH9fP2RBOs4Av445TzxAF8WsvZ5kfk0rMd4NxVj";
+     static final String TWITTER_ACCESS_TOKEN_SECRET = "DfXkInEzL3t4wxS1N6EhJ2D0lWXKWa72Cm0Twr3buvu8x";
+     
+     
+}
