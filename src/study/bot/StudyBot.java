@@ -41,26 +41,26 @@ public class StudyBot {
         twitter = tf.getInstance();
 
         List<String> searches = new ArrayList<>();
-        searches.add(" نفسي اذاكر");
-        searches.add("عايز اذاكر ");
-        searches.add("اذاكر ");
-        searches.add(" مبذاكرش");
-        searches.add(" نذاكر");
+        // searches.add(" نفسي اذاكر");
+        // searches.add("عايز اذاكر ");
+        // searches.add("اذاكر ");
+        // searches.add(" مبذاكرش");
+        // searches.add(" نذاكر");
 
         List<String> replies = new ArrayList<>();
-        replies.add("ذاكر(ي)");
-        replies.add("مبتذاكرش ليه؟");
-        replies.add("طب خش ذاكر");
-        replies.add("انا بقول تخشوا تذاكروا");
+        // replies.add("ذاكر(ي)");
+        // replies.add("مبتذاكرش ليه؟");
+        // replies.add("طب خش ذاكر");
+        // replies.add("انا بقول تخشوا تذاكروا");
 
         List<String> tweets = new ArrayList<>();
-        tweets.add("خش ذاكر");
-        tweets.add("مبتذاكرش ليه؟");
-        tweets.add("خشوا ذاكروا يا شباب");
-        tweets.add("يلا نذاكر");
-        tweets.add("نخش نذاكر بقي؟");
-        tweets.add("حتي الروبوتس بتذاكر يا جماعه");
-        tweets.add("انا بقول تخشوا تذاكروا");
+        // tweets.add("خش ذاكر");
+        // tweets.add("مبتذاكرش ليه؟");
+        // tweets.add("خشوا ذاكروا يا شباب");
+        // tweets.add("يلا نذاكر");
+        // tweets.add("نخش نذاكر بقي؟");
+        // tweets.add("حتي الروبوتس بتذاكر يا جماعه");
+        // tweets.add("انا بقول تخشوا تذاكروا");
 
         thread = new Thread() {
 
