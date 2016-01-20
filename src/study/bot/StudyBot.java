@@ -24,13 +24,13 @@ import twitter4j.TwitterFactory;
  */
 public class StudyBot {
 
-    static Thread thread, thread2;
+    static Thread thread;
     static OAuth Auth;
     static TwitterFactory tf;
     static Twitter twitter;
     static Random rn;
     static int searchNumber, replyNumber, tweetNumber;
-    static Status status;
+    static Status status, status2;
 
     public static void main(String[] args) throws TwitterException {
 
@@ -41,26 +41,37 @@ public class StudyBot {
         twitter = tf.getInstance();
 
         List<String> searches = new ArrayList<>();
-        // searches.add(" نفسي اذاكر");
-        // searches.add("عايز اذاكر ");
-        // searches.add("اذاكر ");
-        // searches.add(" مبذاكرش");
-        // searches.add(" نذاكر");
+        searches.add(" نفسي اذاكر");
+        searches.add("عايز اذاكر ");
+        searches.add("اذاكر ");
+        searches.add(" مبذاكرش");
+        searches.add(" نذاكر");
+        searches.add(" هسقط");
 
         List<String> replies = new ArrayList<>();
-        // replies.add("ذاكر(ي)");
-        // replies.add("مبتذاكرش ليه؟");
-        // replies.add("طب خش ذاكر");
-        // replies.add("انا بقول تخشوا تذاكروا");
+        replies.add("ذاكر(ي)");
+        replies.add("مبتذاكرش ليه؟");
+        replies.add("طب خش ذاكر");
+        replies.add("انا بقول تخشوا تذاكروا");
+        replies.add("نخش نذاكر بقي؟");
+        replies.add("الفاينال لا يرحم");
+        replies.add("خش ذاكر");
 
         List<String> tweets = new ArrayList<>();
-        // tweets.add("خش ذاكر");
-        // tweets.add("مبتذاكرش ليه؟");
-        // tweets.add("خشوا ذاكروا يا شباب");
-        // tweets.add("يلا نذاكر");
-        // tweets.add("نخش نذاكر بقي؟");
-        // tweets.add("حتي الروبوتس بتذاكر يا جماعه");
-        // tweets.add("انا بقول تخشوا تذاكروا");
+        tweets.add("خش ذاكر");
+        tweets.add("مبتذاكرش ليه؟");
+        tweets.add("خشوا ذاكروا يا شباب");
+        tweets.add("يلا نذاكر");
+        tweets.add("نخش نذاكر بقي؟");
+        tweets.add("حتي الروبوتس بتذاكر يا جماعه");
+        tweets.add("انا بقول تخشوا تذاكروا");
+        tweets.add("خشوا ذاكروا");
+        tweets.add("مبتذاكروش ليه؟");
+        tweets.add("خشوا ذاكروا يا علوق");
+        tweets.add(" هوبا يلا نذاكر");
+        tweets.add("نخش نذاكر بقي ولا ايه؟");
+        tweets.add("الفاينال لا يرحم");
+        tweets.add("انا بقول تخشوا تذاكروا احسن ");
 
         thread = new Thread() {
 
@@ -69,55 +80,54 @@ public class StudyBot {
 
                 try {
 
-                    rn = new Random();
-                    searchNumber = rn.nextInt(5);
-                    replyNumber = rn.nextInt(4);
+                    while (true) {
 
-                    //create a new search, chosoe from random searches
-                    Query query = new Query(searches.get(searchNumber));
-                    //get the results from that search
-                    QueryResult result = twitter.search(query);
-                    //get the first tweet from those results
-                    Status tweetResult = result.getTweets().get(0);
-                    //reply to that tweet, choose from random replies
-                    StatusUpdate statusUpdate = new StatusUpdate(".@" + tweetResult.getUser().getScreenName() + replies.get(replyNumber));
-                    statusUpdate.inReplyToStatusId(tweetResult.getId());
-                    status = twitter.updateStatus(statusUpdate);
-                    //print a message so we know when it finishes
-                    System.out.println("Done.");
-                    //Sleeps A little
-                    Thread.sleep(20 * 60 * 1000);
+                        rn = new Random();
+                        searchNumber = rn.nextInt(6);
+                        replyNumber = rn.nextInt(7);
+
+                        //create a new search, chosoe from random searches
+                        Query query = new Query(searches.get(searchNumber));
+                        //get the results from that search
+                        QueryResult result = twitter.search(query);
+                        //get the first tweet from those results
+                        Status tweetResult = result.getTweets().get(0);
+                        //reply to that tweet, choose from random replies
+                        StatusUpdate statusUpdate = new StatusUpdate(".@" + tweetResult.getUser().getScreenName() + replies.get(replyNumber));
+                        statusUpdate.inReplyToStatusId(tweetResult.getId());
+                        status = twitter.updateStatus(statusUpdate);
+                        //print a message so we know when it finishes
+                        System.out.println("Done in thread 1...");
+                        System.out.println("Sleeping...");
+                        //Sleeps A little
+                        Thread.sleep(20*60*1000);
+                        
+                        //------------------------------------
+                        
+                        rn = new Random();
+                        tweetNumber = rn.nextInt(14);
+                        //send a tweet
+                        status2 = twitter.updateStatus(tweets.get(tweetNumber) + (char) (rn.nextInt(26) + 'a'));
+                        //print a message so we know when it finishes
+                        System.out.println("Done here...");
+                        System.out.println("Sleeping...");
+                        //Sleeps A little
+                        Thread.sleep(30*60*1000);
+ 
+                    }
 
                 } catch (TwitterException | InterruptedException ex) {
+
+                    ex.printStackTrace();
                 }
 
             }
+
         };
 
-        thread2 = new Thread() {
-
-            @Override
-            public void run() {
-
-                try {
-
-                    rn = new Random();
-                    tweetNumber = rn.nextInt(7);
-                    //send a tweet
-                    status = twitter.updateStatus(tweets.get(tweetNumber));
-                    //print a message so we know when it finishes
-                    System.out.println("Done here.");
-                    //Sleeps A little
-                    Thread.sleep(25 * 60 * 1000);
-
-                } catch (InterruptedException | TwitterException ex) {
-                }
-
-            }
-        };
+     
 
         thread.start();
-        thread2.start();
 
     }
 
