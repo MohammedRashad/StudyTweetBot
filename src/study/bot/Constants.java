@@ -11,10 +11,10 @@ package study.bot;
  */
 public class Constants {
     
-     static final String TWITTER_CONSUMER_KEY = "6QZXPWper84ZfD6vPoQg8cCkG";
-     static final String TWITTER_SECRET_KEY = "D1OtAkFvMt7Q4BHiVZ6xxzf5muVbauvZlKkXnUM8I4PL1c3gKo";
-     static final String TWITTER_ACCESS_TOKEN = "4829498849-iH9fP2RBOs4Av445TzxAF8WsvZ5kfk0rMd4NxVj";
-     static final String TWITTER_ACCESS_TOKEN_SECRET = "DfXkInEzL3t4wxS1N6EhJ2D0lWXKWa72Cm0Twr3buvu8x";
+     static final String TWITTER_CONSUMER_KEY = "";
+     static final String TWITTER_SECRET_KEY = "";
+     static final String TWITTER_ACCESS_TOKEN = "";
+     static final String TWITTER_ACCESS_TOKEN_SECRET = "";
      
      
 }
