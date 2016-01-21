@@ -1,5 +1,5 @@
 # StudyTweetBot
-A Tweet Bot which is the base for @_StudyBot_ Twitter Account
+**A Tweet Bot which is the base for @_StudyBot_ Twitter Account**
 
 *This is not a spamming account, it tweets at regular basis only*
 
