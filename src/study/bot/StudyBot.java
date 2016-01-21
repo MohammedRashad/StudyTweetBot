@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package study.bot;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import twitter4j.Query;
 import twitter4j.QueryResult;
 import twitter4j.Status;
@@ -31,6 +34,7 @@ public class StudyBot {
     static Random rn;
     static int searchNumber, replyNumber, tweetNumber;
     static Status status, status2;
+    static List<String> searches,replies,tweets;
 
     public static void main(String[] args) throws TwitterException {
 
@@ -40,38 +44,7 @@ public class StudyBot {
         tf = new TwitterFactory(Auth.cb.build());
         twitter = tf.getInstance();
 
-        List<String> searches = new ArrayList<>();
-        searches.add(" نفسي اذاكر");
-        searches.add("عايز اذاكر ");
-        searches.add("اذاكر ");
-        searches.add(" مبذاكرش");
-        searches.add(" نذاكر");
-        searches.add(" هسقط");
-
-        List<String> replies = new ArrayList<>();
-        replies.add("ذاكر(ي)");
-        replies.add("مبتذاكرش ليه؟");
-        replies.add("طب خش ذاكر");
-        replies.add("انا بقول تخشوا تذاكروا");
-        replies.add("نخش نذاكر بقي؟");
-        replies.add("الفاينال لا يرحم");
-        replies.add("خش ذاكر");
-
-        List<String> tweets = new ArrayList<>();
-        tweets.add("خش ذاكر");
-        tweets.add("مبتذاكرش ليه؟");
-        tweets.add("خشوا ذاكروا يا شباب");
-        tweets.add("يلا نذاكر");
-        tweets.add("نخش نذاكر بقي؟");
-        tweets.add("حتي الروبوتس بتذاكر يا جماعه");
-        tweets.add("انا بقول تخشوا تذاكروا");
-        tweets.add("خشوا ذاكروا");
-        tweets.add("مبتذاكروش ليه؟");
-        tweets.add("خشوا ذاكروا يا علوق");
-        tweets.add(" هوبا يلا نذاكر");
-        tweets.add("نخش نذاكر بقي ولا ايه؟");
-        tweets.add("الفاينال لا يرحم");
-        tweets.add("انا بقول تخشوا تذاكروا احسن ");
+        lists();
 
         thread = new Thread() {
 
@@ -85,7 +58,6 @@ public class StudyBot {
                         rn = new Random();
                         searchNumber = rn.nextInt(6);
                         replyNumber = rn.nextInt(7);
-
                         //create a new search, chosoe from random searches
                         Query query = new Query(searches.get(searchNumber));
                         //get the results from that search
@@ -100,20 +72,20 @@ public class StudyBot {
                         System.out.println("Done in thread 1...");
                         System.out.println("Sleeping...");
                         //Sleeps A little
-                        Thread.sleep(20*60*1000);
-                        
-                        //------------------------------------
+                        Thread.sleep(20 * 1000);
+
+                        //------------------------------------//
                         
                         rn = new Random();
                         tweetNumber = rn.nextInt(14);
                         //send a tweet
-                        status2 = twitter.updateStatus(tweets.get(tweetNumber) + (char) (rn.nextInt(26) + 'a'));
+                        status2 = twitter.updateStatus(tweets.get(tweetNumber) + " "+(char) (rn.nextInt(26) + 'a'));
                         //print a message so we know when it finishes
                         System.out.println("Done here...");
                         System.out.println("Sleeping...");
                         //Sleeps A little
-                        Thread.sleep(30*60*1000);
- 
+                        Thread.sleep(10 * 60 * 1000);
+
                     }
 
                 } catch (TwitterException | InterruptedException ex) {
@@ -125,10 +97,50 @@ public class StudyBot {
 
         };
 
-     
-
         thread.start();
 
+    }
+
+    private static void lists() {
+        
+        searches = new ArrayList<>();
+        searches.add(" نفسي اذاكر");
+        searches.add("عايز اذاكر ");
+        searches.add("اذاكر ");
+        searches.add(" مبذاكرش");
+        searches.add(" نذاكر");
+        searches.add(" هسقط");
+        
+        //--------------//
+        
+        replies = new ArrayList<>();
+        replies.add("ذاكر(ي)");
+        replies.add("مبتذاكرش ليه؟");
+        replies.add("طب خش ذاكر");
+        replies.add("انا بقول تخشوا تذاكروا");
+        replies.add("نخش نذاكر بقي؟");
+        replies.add("الفاينال لا يرحم");
+        replies.add("خش ذاكر");
+
+        //--------------//
+        
+        tweets = new ArrayList<>();
+        tweets.add("خش ذاكر");
+        tweets.add("مبتذاكرش ليه؟");
+        tweets.add("خشوا ذاكروا يا شباب");
+        tweets.add("يلا نذاكر");
+        tweets.add("نخش نذاكر بقي؟");
+        tweets.add("حتي الروبوتس بتذاكر يا جماعه");
+        tweets.add("انا بقول تخشوا تذاكروا");
+        tweets.add("خشوا ذاكروا");
+        tweets.add("مبتذاكروش ليه؟");
+        tweets.add("خشوا ذاكروا يا علوق");
+        tweets.add(" هوبا يلا نذاكر");
+        tweets.add("نخش نذاكر بقي ولا ايه؟");
+        tweets.add("الفاينال لا يرحم");
+        tweets.add("انا بقول تخشوا تذاكروا احسن ");
+        
+        
     }
 
 }
