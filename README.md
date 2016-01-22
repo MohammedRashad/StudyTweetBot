@@ -15,4 +15,19 @@
 
 *Code is Totally Free to use for personal and commerial stuff*
 
+**Changelog :**
+
+>> - V1.0 : Initial Release 
+
+>> - V1.1 : BugFixes 
+
+>> - V1.1.1 :Added better algorithm and more queries
+
+>> - V1.1.2: BugFixes
+
+>> - V1.1.3: Added More Queries and better code implementation
+
+
+
+
 
