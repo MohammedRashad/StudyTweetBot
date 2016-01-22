@@ -5,9 +5,9 @@
 
 **Idea :**
 
-- Searches for some pre-defined queries randomly
-- Mentions the first tweeter in that queruy with random reply from the list
-- Sleeps for a specific time then repeat
+- Searches for some pre-defined queries randomly.
+- Mentions a random tweeter in that query with random reply from the list.
+- Sleeps for a specific time then repeat forever.
 
 **Note :**
 
