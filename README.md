@@ -15,6 +15,9 @@
 
 *Code is Totally Free to use for personal and commerial stuff*
 
+*Code is signed under GNU Public license v3*
+
+
 **Changelog :**
 
 >> - V1.0 : Initial Release 
