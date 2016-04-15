@@ -1,8 +1,21 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2016 root
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+
 package study.bot;
 
 /**
@@ -11,19 +24,20 @@ package study.bot;
  */
 public class Constants {
     
-     static final String TWITTER_CONSUMER_KEY = "";
-     static final String TWITTER_SECRET_KEY = "";
-     static final String TWITTER_ACCESS_TOKEN = "";
-     static final String TWITTER_ACCESS_TOKEN_SECRET = "";
-     
-          static final String SEARCH_QUERY_1 = " نفسي اذاكر";
+     static final String TWITTER_CONSUMER_KEY = "oB2Bdu5u6I0sLRNOoShw6ocst";
+     static final String TWITTER_SECRET_KEY = "BwwaC1E8CI7xdo6nIzoIBiVzBZWVQSIZ84AjsZ77fYKBp8cufj";
+     static final String TWITTER_ACCESS_TOKEN = "4829498849-24jJ4efCcBLzJi07eKXKY28RVwkovnqZmibRe5t";
+     static final String TWITTER_ACCESS_TOKEN_SECRET = "y7bu9fsLBxiHtPBvfEeZMpLZEfmxYBLSWWS2WxOuwKJUU";
+    
+     static final String SEARCH_QUERY_1 = " نفسي اذاكر";
      static final String SEARCH_QUERY_2 = "عايز اذاكر ";
      static final String SEARCH_QUERY_3 = "اذاكر ";
      static final String SEARCH_QUERY_4 = " مبذاكرش";
      static final String SEARCH_QUERY_5 = " نذاكر";
      static final String SEARCH_QUERY_6 = " هسقط";
      static final String SEARCH_QUERY_7 = " فاينالز";
-     static final String SEARCH_QUERY_8 = " هشيل";
+     static final String SEARCH_QUERY_8 = " هشيل"; 
+     static final String SEARCH_QUERY_9 = " فاينال";
           
      static final String REPLY_QUERY_1 =  "ذاكر(ي)";
      static final String REPLY_QUERY_2 =  "مبتذاكرش ليه؟";
@@ -49,9 +63,10 @@ public class Constants {
      static final String TWEET_QUERY_13 =  "الفاينال لا يرحم";
      static final String TWEET_QUERY_14 =  "انا بقول تخشوا تذاكروا احسن ";
 
-     static final String DONE_1 = "Done Step 1 of 2 ...";
-     static final String DONE_2 = "Done Step 2 of 2 ...";
+     static final String DONE_1 = "Done Replying ...";
+     static final String DONE_2 = "Done Tweeting ...";
      static final String SLEEP = "Sleeping...";
      static final String REPEAT = "Repeat!!!";
 
+     
 }
