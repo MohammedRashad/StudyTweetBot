@@ -24,10 +24,10 @@ package study.bot;
  */
 public class Constants {
     
-     static final String TWITTER_CONSUMER_KEY = "oB2Bdu5u6I0sLRNOoShw6ocst";
-     static final String TWITTER_SECRET_KEY = "BwwaC1E8CI7xdo6nIzoIBiVzBZWVQSIZ84AjsZ77fYKBp8cufj";
-     static final String TWITTER_ACCESS_TOKEN = "4829498849-24jJ4efCcBLzJi07eKXKY28RVwkovnqZmibRe5t";
-     static final String TWITTER_ACCESS_TOKEN_SECRET = "y7bu9fsLBxiHtPBvfEeZMpLZEfmxYBLSWWS2WxOuwKJUU";
+     static final String TWITTER_CONSUMER_KEY = "";
+     static final String TWITTER_SECRET_KEY = "";
+     static final String TWITTER_ACCESS_TOKEN = "";
+     static final String TWITTER_ACCESS_TOKEN_SECRET = "";
     
      static final String SEARCH_QUERY_1 = " نفسي اذاكر";
      static final String SEARCH_QUERY_2 = "عايز اذاكر ";
