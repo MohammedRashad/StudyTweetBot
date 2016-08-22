@@ -19,10 +19,10 @@ First Versions were messily coded but functional, I recoded the whole bot, and n
 
 - Console-Based
 - Cross Platform
-- Choose users randomly
-- More than 10 replies to be choosen from randomly
 - Open-Source Project
+- Choose users randomly
 - Based on twitter4j library
+- More than 10 replies to be choosen from randomly
 
 **Changelog :**
 
