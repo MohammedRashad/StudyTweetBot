@@ -25,7 +25,10 @@ First Versions were messily coded but functional, I recoded the whole bot, and n
 - Based on twitter4j library
 
 **Changelog :**
-- V1.x : A functional code.
+
+- V1.0 : 
+    - A functional code.
+    
 - V2.0 :
     - Re-written the whole code
     - More modular code to allow future improvements
